@@ -15,15 +15,8 @@ import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import InsertDriveFileIcon from '@mui/icons-material/InsertDriveFile';
 
-const menuItems = [
-    {
-        text: 'Batch Pipeline',
-        link: "#",
-        icon: <InsertDriveFileIcon/>
-    }
-]
+import menuItems from "../menuItems";
 
 const drawerWidth = 240;
 
@@ -133,7 +126,7 @@ let Frame = (props) => {
                                     justifyContent: open? 'initial' : 'center',
                                     px: 2.5
                                 }}
-                                onClick={()=>{window.location.href = item.link}}
+                                onClick={()=>{window.location.href = "?page="+item.link}}
                             >
                                 <ListItemIcon
                                     sx={{
